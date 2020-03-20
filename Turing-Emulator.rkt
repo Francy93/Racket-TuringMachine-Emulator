@@ -35,6 +35,17 @@
     )
 )
 
+(define ALGO_CONVERT   ;CONVERTING 1s in 0s and vice versa
+    (list 
+        (INS 'Sl  0  1 'Sl 'R) 
+        (INS 'Sl  1  0 'Sl 'R) 
+        (INS 'Sl 'b 'b 'S2 'L) 
+        (INS 'S2  0  0 'S2 'L) 
+        (INS 'S2  1  1 'S2 'L) 
+        (INS 'S2 'b 'b 'S0 'R)
+    )
+)
+
 
 
 ;||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| TM EMULATOR ||||||||||||||||||||||||||||||||||||||||||||||||
@@ -84,28 +95,4 @@
 
 ;|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| TEST |||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-(TM_EMU '10101 ALGO_ADDICTION )
-
-
-
-
-
-
-
-
-
-
-
-
-#|
-(define ALGO_TEST
-    (list 
-        (INS 'Sl  0  1 'Sl 'R) 
-        (INS 'Sl  1  0 'Sl 'R) 
-        (INS 'Sl 'b 'b 'S2 'L) 
-        (INS 'S2  0  0 'S2 'L) 
-        (INS 'S2  1  1 'S2 'L) 
-        (INS 'S2 'b 'b 'S3 'R)
-    )
-)
-|#
+(TM_EMU '101010 ALGO_ADDICTION)
